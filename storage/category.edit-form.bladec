@@ -1,0 +1,16 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title', "Tạo mới tài khoản"); ?>
+<?php $this->startSection('content'); ?>
+<form  method="post" enctype="multipart/form-data">
+ <div>
+ Tên Sản Phẩm: <input type="text" name="name" value="<?= $category->name ?>">
+ </div>
+ </select>
+ </div>
+ <div>
+ <button type="submit">Sửa danh mục</button>
+ </div>
+</form>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main'); } ?>

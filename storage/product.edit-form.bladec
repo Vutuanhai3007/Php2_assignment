@@ -1,0 +1,36 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title', "Tạo mới tài khoản"); ?>
+<?php $this->startSection('content'); ?>
+<form  method="post" enctype="multipart/form-data">
+ <div>
+ Mã Sản Phẩm: <input type="text" name="id" value="<?= $product->id ?>">
+ </div>
+ <div>
+ Tên Sản Phẩm: <input type="text" name="name" value="<?= $product->name ?>">
+ </div>
+ <div>
+ Ảnh sản phẩm: <input type="file" name="main_image" value="<?= $product->main_image ?>">
+ </div>
+ <div>
+ Giá Sản Phẩm: <input type="number" name="price" value="<?= $product->price ?>">
+ </div>
+ <div>
+ Chi tiết Sản Phẩm: <input type="text" name="detail" value="<?= $product->detail ?>">
+ </div>
+ <div>
+ Giảm Giá: <input type="text" name="promotion" value="<?= $product->promotion ?>">
+ </div>
+ <div>
+ Role: <select name="category_id" >
+ <?php foreach($categories as $r ):?>
+ <option <?php if($product->category_id == $r->id) echo "selected" ?> value="<?= $r->id ?>"><?= $r->name?></option>
+ <?php endforeach?>
+ </select>
+ </div>
+ <div>
+ <button type="submit">Sửa sản phẩm</button>
+ </div>
+</form>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main'); } ?>
