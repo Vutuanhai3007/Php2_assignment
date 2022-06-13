@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{BASE_URL . '/public/'}}dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -13,7 +13,7 @@
           <img src="{{BASE_URL . '/public/'}}dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Hi! Vũ Tuấn Hải</a>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-wrench"></i>
               <p>Tài Khoản
                 <i class="right fas fa-angle-left"></i>
               </p>
@@ -58,7 +58,7 @@
           </li>
           <li class="nav-item ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-table"></i>
               <p>
                 Danh mục sản phẩm
                 <i class="right fas fa-angle-left"></i>
@@ -81,7 +81,7 @@
           </li>
           <li class="nav-item ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="me-3 fas fa-book"></i>
               <p>
                 Sản phẩm
                 <i class="right fas fa-angle-left"></i>
@@ -102,6 +102,53 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-cart-plus"></i>
+                            <span>Đơn hàng</span>
+                        </a>
+                        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Quản lý Đơn hàng</h6>
+                                <a class="collapse-item" href="index.php?act=donhang">Đơn hàng chờ xác nhận</a>
+                                <a class="collapse-item" href="index.php?act=dhdanggiao">Đơn hàng đang giao</a>
+                                <a class="collapse-item" href="index.php?act=dhdagiao">Đơn hàng đã giao</a>
+                            </div>
+                            
+                        </div>
+                    </li>
+
+                    <hr class="sidebar-divider">
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Bình luận</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" >
+                            <i class="me-3  fas fa-chart-bar"></i>
+                            <span>Thống kê sản phẩm</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" >
+                            <i class="me-3  fas fa-chart-bar"></i>
+                            <span>Thống kê đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Slide show</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Setting</span></a>
+                    </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

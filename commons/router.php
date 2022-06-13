@@ -6,12 +6,12 @@ $url = !isset($_GET['url']) ? "/" : $_GET['url'];
 
 $router = new RouteCollector();
 
-// // filter check đăng nhập
-// $router->filter('auth', function(){
-//     if(!isset($_SESSION['auth']) || empty($_SESSION['auth'])){
-//         header('location: ' . BASE_URL . 'login');die;
-//     }
-// });
+// filter check đăng nhập
+$router->filter('auth', function(){
+    if(!isset($_SESSION['auth']) || empty($_SESSION['auth'])){
+        header('location: ' . BASE_URL . 'login');die;
+    }
+});
 
 
 // bắt đầu định nghĩa ra các đường dẫn

@@ -2,6 +2,13 @@
 <?php $this->startSection('title', "Tạo mới tài khoản"); ?>
 <?php $this->startSection('content'); ?>
 <form  method="post" enctype="multipart/form-data">
+<div>
+ Role: <select name="category_id" >
+ <?php foreach($categories as $r ):?>
+ <option <?php if($product->category_id == $r->id) echo "selected" ?> value="<?= $r->id ?>"><?= $r->name?></option>
+ <?php endforeach?>
+ </select>
+ </div>
  <div>
  Mã Sản Phẩm: <input type="text" name="id" value="<?= $product->id ?>">
  </div>
@@ -15,18 +22,13 @@
  Giá Sản Phẩm: <input type="number" name="price" value="<?= $product->price ?>">
  </div>
  <div>
+ Giảm Giá: <input type="number" name="promotion" value="<?= $product->promotion ?>">
+ </div>
+ <div>
  Chi tiết Sản Phẩm: <input type="text" name="detail" value="<?= $product->detail ?>">
  </div>
- <div>
- Giảm Giá: <input type="text" name="promotion" value="<?= $product->promotion ?>">
- </div>
- <div>
- Role: <select name="category_id" >
- <?php foreach($categories as $r ):?>
- <option <?php if($product->category_id == $r->id) echo "selected" ?> value="<?= $r->id ?>"><?= $r->name?></option>
- <?php endforeach?>
- </select>
- </div>
+ 
+ 
  <div>
  <button type="submit">Sửa sản phẩm</button>
  </div>
