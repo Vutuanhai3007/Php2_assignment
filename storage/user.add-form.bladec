@@ -12,22 +12,38 @@
  <div class="form-group">
  <label for="">Name</label>
  <input type="text" name="name" class="form-control">
+ <?php if(isset($_GET['nameerr'])): ?>
+ <span class="text-danger"><?php echo \htmlentities($_GET['nameerr'], ENT_QUOTES, 'UTF-8', false); ?></span>
+ <?php endif; ?>
  </div>
  <div class="form-group">
  <label for="">Email</label>
  <input type="email" name="email"  class="form-control">
+ <?php if(isset($_GET['emailerr'])): ?>
+ <span class="text-danger"><?php echo \htmlentities($_GET['emailerr'], ENT_QUOTES, 'UTF-8', false); ?></span>
+ <?php endif; ?>
  </div>
  <div class="form-group">
  <label for="">Password </label>
  <input type="password" name="password"  class="form-control">
+ <?php if(isset($_GET['passworderr'])): ?>
+ <span class="text-danger"><?php echo \htmlentities($_GET['passworderr'], ENT_QUOTES, 'UTF-8', false); ?></span>
+ <?php endif; ?>
  </div>
  <div class="form-group">
- <label for="">Avatar </label>
+ <div class="row">
+ <label for="">Avatar</label>
  <input type="file" name="avatar" class="form-control">
+ <?php if(isset($_GET['avatarerr'])): ?>
+ <span class="text-danger"><?php echo \htmlentities($_GET['avatarerr'], ENT_QUOTES, 'UTF-8', false); ?></span>
+ <?php endif; ?>
  </div>
  <div class="form-group">
  <label for="">Phone number </label>
  <input type="text" name="phone_number" class="form-control">
+ <?php if(isset($_GET['phone_numbererr'])): ?>
+ <span class="text-danger"><?php echo \htmlentities($_GET['phone_numbererr'], ENT_QUOTES, 'UTF-8', false); ?></span>
+ <?php endif; ?>
  </div>
  <div class="form-group">
  <label for="">Role</label>

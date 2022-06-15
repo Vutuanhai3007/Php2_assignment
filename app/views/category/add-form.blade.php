@@ -12,6 +12,9 @@
                     <div class="form-group">
                         <label for="">Tên danh mục</label>
                         <input type="text" name="name" class="form-control">
+                        @if(isset($_GET['nameerr']))
+                        <span class="text-danger">{{$_GET['nameerr']}}</span>
+                        @endif
                     </div>
                    
                     </div>

@@ -3,7 +3,7 @@
 <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <form action="" method="get">
+            <form action="" method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="input-group input-group-sm">
@@ -41,9 +41,9 @@
                             <td>
                                 <img src="{{ BASE_URL . $u->main_image}}" width="70">
                             </td>
-                            <td>{{$u->price}}</td>
-                            <td>{{$u->promotion}}</td>
-                            <td>{{$u->detail}}</td>
+                            <td>{{ $u->price }}</td>
+                            <td>{{ $u->promotion }}</td>
+                            <td>{!! $u->detail !!}</td>
                             <td>
                                 <a class="btn btn-danger" href="sua-sp/{{ $u->id }}">Sửa</a>
                                 <a class="btn btn-success" href="xoa-sp/{{ $u->id }}">Xóa</a>

@@ -29,6 +29,17 @@ class CategoryController extends BaseController{
 
     public function addNewCategory(){
         
+        extract($_POST);
+        $nameerr = "";
+        
+        if(strlen($name) == 0){
+            $nameerr = "Không được để trống tên danh mục";
+        }
+        if(strlen($nameerr ) > 0){
+            header('location: ' . BASE_URL . "tao-dm?nameerr=$nameerr");die;
+        }
+
+
         $model = new Category();
         $model->fill($_POST);
         $model->save();
@@ -42,6 +53,8 @@ class CategoryController extends BaseController{
     }
 
     public function categoryEditForm($id){
+
+        
         $category = Category::find($id);
         // $roles = Role::all();
         return $this->render('category.edit-form', compact('category'));
@@ -49,6 +62,16 @@ class CategoryController extends BaseController{
 
     public function saveEditCategory($id){
         
+         extract($_POST);
+        $nameerr = "";
+        
+        if(strlen($name) == 0){
+            $nameerr = "Không được để trống tên danh mục";
+        }
+        if(strlen($nameerr ) > 0){
+            header('location: ' . BASE_URL . "sua-dm/$id?nameerr=$nameerr");die;
+        }
+
         $category = Category::find($id);
         $category->fill($_POST);
         $category->save();
